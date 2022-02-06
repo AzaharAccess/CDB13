@@ -2,24 +2,33 @@ clear
 
 banner() {
 echo ""
-echo -e "  _____ ____  _____ _____ _____   ____   ____ _______ __ ____   "
-echo -e "/ ____/ __ \|  __ \_   _|  __ \ / __ \ / __ \__   __/_ |___ \   "
-echo -e "| |   | |  | | |  | || | | |__) | |  | | |  | | | |   | | __) | "
-echo -e "| |   | |  | | |  | || | |  _  /| |  | | |  | | | |   | ||__ <  "
-echo -e "| |___| |__| | |__| || |_| | \ \| |__| | |__| | | |   | |___) | " 
-echo -e " \_____\____/|_____/_____|_|  \_\\____/ \____/  |_|   |_|____/  "
-echo ""                                                                
-echo -e "qxzcw On TikTok ! "
+echo -e "   .:\      /:.   "
+echo -e "  /   \_()_/   \  "
+echo -e "  |   |    |   |  "
+echo -e "  |   |    |   |  "
+echo -e "  |   |____|   |  "
+echo -e "   \  / || \  /  "
+echo -e "    :/  ||  :/   "
+echo -e "        || "
+echo -e "        || "
+echo -e "        XX "
+echo -e "        XX "
+echo -e "        XX "
+echo -e "        XX "
+echo -e "        OO "
+echo ""
+echo -e "sigueme en Tiktok como w7bnk ! "
+
 }
 
-codificador() {
+codificadorr13() {
         clear
         echo -e  "Texto ah codificar "
         read -p ">  " text
         echo "$text" | rot13
 }
 
-decodificador1() {
+decodificador13() {
         clear
         echo -e "Texto ah decodificar "
         read -p "> " rot13dect
@@ -30,24 +39,46 @@ exit1() {
         exit
 }
 
+
+codi64() {
+        clear
+        echo -e "Texto B64 a codificar "
+        read -p "> " b64c
+        echo "$b64c" | base64
+}
+
+deco64() {
+        clear
+        echo -e "Texto B64 a decodificar "
+        read -p "> " b64d
+        echo "$b64d" | base64 -d
+}
+
 welcome() {
      clear
           banner
-          echo -e "1: Codificar Texto"
-          echo -e "2: Decodificar texto"
-          echo -e "3: salir "
+          echo -e "1: Codificar Texto root 13"
+          echo -e "2: Decodificar texto root 13"
+          echo -e "3: cofificar texto Base 64"
+          echo -e "4: decodificar texto B64"
+          echo -e "5: salir "
           echo ""
           echo -e "Programmed by azahar"
           echo ""
           read -p "> " Opcion
        if [ $Opcion -eq 1 ];
        then
-               codificador
+               codificadorr13
        elif [ $Opcion -eq 2 ];
        then
-               decodificador1
-                        
+               decodificador13
        elif [ $Opcion -eq 3 ];
+       then
+               codi64
+       elif [ $Opcion -eq 4 ];
+       then    deco64 
+         
+       elif [ $Opcion -eq 5 ];
                    then
                            exit1
                    else
